@@ -465,10 +465,11 @@ h2 {
 }
 
 .feature-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 16px;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  align-items: center;
+  gap: 5px 14px;
+  padding: 14px;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
@@ -479,6 +480,15 @@ h2 {
 .feature-list li:hover {
   transform: translateY(-2px);
   border-color: var(--border-medium);
+}
+
+.feature-list img {
+  display: block;
+  grid-row: 1 / span 2;
+  width: 82px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
 }
 
 .feature-list strong {
@@ -508,6 +518,64 @@ h2 {
 
 .note strong {
   color: var(--text-main);
+}
+
+/* Campaign Gallery */
+.gallery {
+  background-color: var(--bg-alt);
+}
+
+.gallery-inner {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 38px;
+}
+
+.gallery-heading h2 {
+  max-width: 640px;
+}
+
+.gallery-heading > p {
+  max-width: 300px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: start;
+  gap: 40px;
+}
+
+.gallery-item {
+  margin: 0;
+}
+
+.gallery-item:nth-child(2) {
+  margin-top: 52px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.gallery-item figcaption {
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 13px;
 }
 
 /* Price Section (Dark Theme Accent) */
@@ -744,6 +812,7 @@ h2 {
   .hero,
   .problem-grid,
   .product,
+  .gallery-grid,
   .contact-box,
   .shop-card {
     grid-template-columns: 1fr;
@@ -757,9 +826,15 @@ h2 {
 
   .problem-grid,
   .product,
+  .gallery-inner,
   .price,
   .contact {
     padding: 60px 20px;
+  }
+
+  .gallery-heading {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .feature-list {
@@ -799,6 +874,15 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .gallery-item:nth-child(2) {
+    margin-top: 0;
   }
 
   nav {
