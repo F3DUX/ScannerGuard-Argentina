@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ScannerGuard Argentina monitorea luz y movimiento en cavas de vino para ayudar a cuidar el reposo de cada botella."
+    />
+    <title>ScannerGuard Argentina | Cuidado para cavas de vino</title>
+    <link rel="icon" href="./public/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="#inicio" aria-label="ScannerGuard Argentina, inicio">
+          <img src="./public/favicon.svg" alt="" width="42" height="42" />
+          <span>ScannerGuard <small>Argentina</small></span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <a href="#problema">El desafío</a>
+          <a href="#producto">El dispositivo</a>
+          <a href="#comprar">Comprar</a>
+          <a class="button button-small" href="https://ig.me/m/scaner_guard_arg" target="_blank" rel="noopener noreferrer">Contactanos</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" id="inicio" aria-labelledby="titulo-principal">
+        <div class="hero-copy">
+          <p class="eyebrow">Tecnología para la vitivinicultura patagónica</p>
+          <h1 id="titulo-principal">Cuidá el reposo de <em>tu vino.</em></h1>
+          <p class="lead">
+            ScannerGuard monitorea la luz y el movimiento en la cava para ayudarte
+            a estar atento a las condiciones de guarda de tus botellas.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contacto">Consultar por el prototipo</a>
+            <a class="text-link" href="#producto">Conocer cómo funciona ↓</a>
+          </div>
+          <ul class="quick-facts" aria-label="Funciones principales">
+            <li>Detección de luz</li>
+            <li>Detección de movimiento</li>
+            <li>Indicadores LED</li>
+          </ul>
+        </div>
+        <figure class="hero-photo">
+          <img
+            src="./public/images/bosque.jpg"
+            alt="Prototipo ScannerGuard, un dispositivo compacto con sensores e indicadores"
+          />
+          <figcaption>ScannerGuard · prototipo para monitoreo de cavas</figcaption>
+        </figure>
+      </section>
+
+      <section class="problem" id="problema" aria-labelledby="titulo-problema">
+        <div class="container problem-grid">
+          <div>
+            <p class="eyebrow">El desafío en Patagonia</p>
+            <h2 id="titulo-problema">La guarda también necesita atención.</h2>
+          </div>
+          <div class="section-copy">
+            <p>
+              En las cavas y bodegas patagónicas, cuidar el vino implica procurar
+              un espacio de guarda protegido de la luz y de movimientos
+              innecesarios. Estos cambios pueden pasar inadvertidos en el día a
+              día.
+            </p>
+            <p>
+              ScannerGuard aborda ese problema monitoreando ambas condiciones y
+              mostrando una señal en el dispositivo cuando las lecturas cambian.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container product" id="producto" aria-labelledby="titulo-producto">
+        <div class="product-photo">
+          <img
+            src="./public/images/despiece.jpg"
+            alt="Vista técnica del prototipo y sus componentes electrónicos"
+          />
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow">El dispositivo</p>
+          <h2 id="titulo-producto">Dos lecturas. Una señal clara.</h2>
+          <p>
+            El prototipo reúne sensores, un Arduino Uno y dos luces indicadoras.
+            El sensor LDR registra cambios de iluminación; el KY-020 detecta
+            inclinaciones o movimientos de la cava. El controlador procesa esas
+            lecturas y comunica el estado con un LED verde o rojo.
+          </p>
+          <ul class="feature-list">
+            <li><strong>LDR</strong><span>Monitorea la luz que llega al espacio de guarda.</span></li>
+            <li><strong>KY-020</strong><span>Advierte cambios de posición o inclinación.</span></li>
+            <li><strong>Arduino Uno</strong><span>Procesa las señales de ambos sensores.</span></li>
+            <li><strong>LED verde y rojo</strong><span>Permiten consultar el estado a simple vista.</span></li>
+          </ul>
+          <p class="note">
+            ScannerGuard detecta e indica cambios; no bloquea la luz ni evita
+            físicamente el movimiento de las botellas.
+          </p>
+        </div>
+      </section>
+
+      <section class="price" id="comprar" aria-labelledby="titulo-comprar">
+        <div class="container shop-section">
+          <div class="shop-intro">
+            <p class="eyebrow">Conocé el prototipo</p>
+            <h2 id="titulo-comprar">ScannerGuard Argentina</h2>
+            <p>Un dispositivo para monitorear la luz y el movimiento en tu cava y cuidar las condiciones de guarda.</p>
+          </div>
+          <article class="shop-card" aria-label="Comprar ScannerGuard Argentina">
+            <img
+              class="shop-photo"
+              src="./public/images/despiece.jpg"
+              alt="Componentes del prototipo ScannerGuard Argentina"
+            />
+            <div class="shop-details">
+              <p class="price-label">Prototipo en desarrollo</p>
+              <h3>ScannerGuard Argentina</h3>
+              <p class="shop-description">Detecta cambios de iluminación e inclinación y los indica con luces LED. Ideal para estar atento al entorno de guarda de tus vinos.</p>
+              <p class="shop-price"><span>Precio</span><strong>A consultar</strong></p>
+              <div class="shop-form">
+                <label for="cantidad">Cantidad</label>
+                <input id="cantidad" name="Cantidad" type="number" min="1" value="1" required />
+                <button class="button button-light" id="comprar-instagram" type="button">Comprar</button>
+              </div>
+              <p class="shop-note" id="estado-compra" aria-live="polite">Al tocar Comprar, se abrirá WhatsApp con un mensaje listo según la cantidad elegida.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container contact" id="contacto" aria-labelledby="titulo-contacto">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2 id="titulo-contacto">Hablemos de tu cava.</h2>
+          <p>Escribinos para conocer el prototipo ScannerGuard Argentina.</p>
+        </div>
+        <address>
+          <a class="button" href="https://ig.me/m/scaner_guard_arg" target="_blank" rel="noopener noreferrer">
+            Escribinos por Instagram · @scaner_guard_arg
+          </a>
+        </address>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand footer-brand" href="#inicio">
+          <img src="./public/favicon.svg" alt="" width="34" height="34" />
+          <span>ScannerGuard <small>Argentina</small></span>
+        </a>
+        <p>© 2026 ScannerGuard Argentina · Integrantes: <strong>Federico Caravotta, Simon Ambrosi y Lucio Woloszyn</strong> · Curso: <strong>3.er año · Instituto Austral de Enseñanza</strong></p>
+      </div>
+    </footer>
+    <script>
+      const cantidad = document.querySelector('#cantidad');
+      const botonComprar = document.querySelector('#comprar-instagram');
+      const estadoCompra = document.querySelector('#estado-compra');
+
+      botonComprar.addEventListener('click', () => {
+        if (!cantidad.reportValidity()) return;
+
+        const unidades = Number(cantidad.value);
+        const producto = unidades === 1 ? 'unidad' : 'unidades';
+        const mensaje = `Hola, ScannerGuard Argentina. Quiero consultar por ${unidades} ${producto} de ScannerGuard. ¿Me pasan el precio y la disponibilidad?`;
+
+        const texto = encodeURIComponent(mensaje);
+        window.open(`https://wa.me/5492975413308?text=${texto}`, '_blank', 'noopener,noreferrer');
+        estadoCompra.textContent = 'Se abrió WhatsApp con el mensaje listo. Revisalo y envialo para consultar tu pedido.';
+      });
+    </script>
+  </body>
+</html>
