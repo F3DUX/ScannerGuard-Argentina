@@ -1,1 +1,0 @@
-# ScannerGuard-Argentina
