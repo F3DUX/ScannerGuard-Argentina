@@ -1,4 +1,5 @@
 :root {
+  /* COLORES Y VARIABLES GENERALES */
   --bg-primary: #f4efe3;
   --bg-surface: #fbf8f1;
   --bg-alt: #e8e2d4;
@@ -35,17 +36,17 @@
   --transition-fast: 150ms ease;
   --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-
+/* CONFIGURACIÓN GENERAL */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/* CONFIGURACIÓN DEL DOCUMENTO */
 html {
   scroll-behavior: smooth;
 }
-
+/* ESTILOS DEL CUERPO DE LA PÁGINA */
 body {
   margin: 0;
   background-color: var(--bg-primary);
@@ -67,22 +68,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* ACCESIBILIDAD */
 
-/* Accessibility Focus States */
 :focus-visible {
   outline: 2px solid var(--accent-sage);
   outline-offset: 3px;
 }
+/* CONTENEDOR PRINCIPAL */
 
-/* Layout Container */
 .container {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
 }
+/* ENCABEZADO Y MENÚ DE NAVEGACIÓN */
 
-/* Header & Navigation */
 .site-header {
   position: sticky;
   top: 0;
@@ -166,8 +167,8 @@ nav a:not(.button):hover {
 nav a:not(.button):hover::after {
   width: 100%;
 }
+/* DISEÑO DE LOS BOTONES */
 
-/* Buttons */
 .button {
   display: inline-flex;
   align-items: center;
@@ -229,8 +230,8 @@ nav a:not(.button):hover::after {
   background-color: var(--accent-sage);
   border-color: var(--accent-sage);
 }
+/* TIPOGRAFÍAS Y TÍTULOS */
 
-/* Typography elements */
 h1, h2, h3, p, figure {
   margin: 0;
 }
@@ -282,7 +283,7 @@ h2 {
   box-shadow: 0 0 0 3px rgba(82, 107, 80, 0.2);
 }
 
-/* Hero Section */
+/* SECCIÓN PRINCIPAL DE PRESENTACIÓN */
 .hero {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -359,8 +360,8 @@ h2 {
   border-radius: 50%;
   background-color: var(--accent-emerald);
 }
+/* DISEÑO DE IMÁGENES */
 
-/* Image Frames */
 .image-frame {
   position: relative;
   overflow: hidden;
@@ -410,7 +411,7 @@ h2 {
   letter-spacing: 0.2px;
 }
 
-/* Problem Section */
+/* SECCIÓN DEL PROBLEMA */
 .problem {
   background-color: var(--bg-alt);
   border-top: 1px solid var(--border-light);
@@ -439,8 +440,8 @@ h2 {
 .section-copy p + p {
   margin-top: 20px;
 }
+/* SECCIÓN DEL PRODUCTO */
 
-/* Product Section */
 .product {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -519,8 +520,8 @@ h2 {
 .note strong {
   color: var(--text-main);
 }
+/* GALERÍA DE IMÁGENES */
 
-/* Campaign Gallery */
 .gallery {
   background-color: var(--bg-alt);
 }
@@ -577,8 +578,8 @@ h2 {
   color: var(--text-muted);
   font-size: 13px;
 }
+/* SECCIÓN DE PRECIOS */
 
-/* Price Section (Dark Theme Accent) */
 .price {
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -745,7 +746,7 @@ h2 {
   line-height: 1.45;
 }
 
-/* Contact Section */
+/* SECCIÓN DE CONTACTO */
 .contact {
   padding: 96px 32px;
 }
@@ -771,8 +772,8 @@ h2 {
 .contact-action {
   font-style: normal;
 }
+/* PIE DE PÁGINA */
 
-/* Footer */
 .site-footer {
   background-color: var(--bg-alt);
   border-top: 1px solid var(--border-light);
@@ -799,7 +800,8 @@ h2 {
   color: var(--text-main);
 }
 
-/* Responsive Styles */
+/* ADAPTACIÓN A CELULARES Y TABLETS */
+
 @media (max-width: 920px) {
   .topbar {
     padding: 14px 20px;

@@ -1,50 +1,91 @@
-<!doctype html>
+
+<*doctype html>
+<*-- Indica que el documento utiliza HTML5 -->
 <html lang="es">
   <head>
+    <*-- Configuración general de la página -->
+
+  
     <meta charset="UTF-8" />
+
+    <*-- Hace que la página se adapte al tamaño de pantalla del dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <*-- Descripción de la página para los buscadores -->
     <meta
       name="description"
       content="ScannerGuard Argentina monitorea luz y movimiento en cavas de vino para ayudar a cuidar el reposo de cada botella."
     />
+
+    <*-- Establece el título que aparece en la pestaña del navegador -->
     <title>ScannerGuard Argentina | Cuidado para cavas de vino</title>
+
+    <*-- Establece el ícono que aparece en la pestaña del navegador -->
     <link rel="icon" href="./public/favicon.svg" type="image/svg+xml" />
+
+    <*-- Conecta el documento HTML con el archivo de estilos CSS -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
+    <*-- ENCABEZADO: contiene el logo y el menú de navegación -->
     <header class="site-header">
       <div class="container topbar">
+
+        <*-- Logo y nombre de la marca. Al hacer clic vuelve al inicio -->
         <a class="brand" href="#inicio" aria-label="ScannerGuard Argentina, inicio">
           <img src="./public/favicon.svg" alt="" width="42" height="42" />
           <span>ScannerGuard <small>Argentina</small></span>
         </a>
+
+        <*-- Menú de navegación para desplazarse entre las secciones -->
         <nav aria-label="Navegación principal">
           <a href="#problema">El desafío</a>
           <a href="#producto">El dispositivo</a>
           <a href="#comprar">Comprar</a>
+
+          <*-- Enlace que abre el contacto de Instagram en otra pestaña -->
           <a class="button button-small" href="https://ig.me/m/scaner_guard_arg" target="_blank" rel="noopener noreferrer">Contactanos</a>
         </nav>
       </div>
     </header>
 
+    <*-- MAIN: contiene el contenido principal de la página -->
     <main>
+
+      <*-- SECCIÓN PRINCIPAL: presenta ScannerGuard y sus funciones -->
       <section class="hero container" id="inicio" aria-labelledby="titulo-principal">
         <div class="hero-copy">
+
+          <*-- Texto pequeño que presenta la temática del producto -->
           <p class="eyebrow">Tecnología para la vitivinicultura patagónica</p>
+
+          <*-- Título principal de la página -->
           <h1 id="titulo-principal">Cuidá el reposo de <em>tu vino.</em></h1>
+
+          <*-- Descripción general del funcionamiento del dispositivo -->
           <p class="lead">
             ScannerGuard monitorea la luz y el movimiento en la cava para ayudarte
             a estar atento a las condiciones de guarda de tus botellas.
           </p>
+
+          <*-- Agrupa los enlaces de acción de la presentación -->
           <div class="hero-actions">
+            <*-- Enlace que lleva a la sección de contacto -->
             <a class="button" href="#contacto">Consultar por el prototipo</a>
+
+            <*-- Enlace que lleva a la explicación del funcionamiento -->
             <a class="text-link" href="#producto">Conocer cómo funciona ↓</a>
           </div>
+
+          <*-- Lista de las principales características del producto -->
           <ul class="quick-facts" aria-label="Funciones principales">
             <li>Detección de luz</li>
             <li>Indicadores LED</li>
           </ul>
         </div>
+
+        <*-- Imagen principal del prototipo con su descripción -->
         <figure class="hero-photo">
           <img
             src="./public/images/bosque.jpg"
@@ -54,17 +95,22 @@
         </figure>
       </section>
 
-      <section class="problem" id="problema" aria-labelledby="titulo-problema">
+      <*-- SECCIÓN DEL PROBLEMA: explica la necesidad que busca resolver el producto -->
+      <section class="problem" id="problema">
         <div class="container problem-grid">
           <div>
             <p class="eyebrow">El desafío en Patagonia</p>
+
+            <*-- Título que introduce el problema -->
             <h2 id="titulo-problema">La guarda también necesita atención.</h2>
           </div>
+
+          <*-- Explicación del problema y de la solución propuesta -->
           <div class="section-copy">
             <p>
               En las cavas y bodegas patagónicas, cuidar el vino implica procurar
-              un espacio de guarda protegido de la luz y de movimientos
-              innecesarios. Estos cambios pueden pasar inadvertidos en el día a
+              un espacio de guarda protegido de la luz y de inclinaciones. 
+              Estos cambios pueden pasar inadvertidos en el día a
               día.
             </p>
             <p>
@@ -75,29 +121,51 @@
         </div>
       </section>
 
+      <*-- SECCIÓN DEL PRODUCTO: explica los componentes y su funcionamiento -->
       <section class="container product" id="producto" aria-labelledby="titulo-producto">
+
+        <*-- Imagen que muestra el dispositivo y sus componentes -->
         <div class="product-photo">
           <img
             src="./public/images/despiece.jpg"
             alt="Vista técnica del prototipo y sus componentes electrónicos"
           />
         </div>
+
         <div class="product-copy">
           <p class="eyebrow">El dispositivo</p>
+
+          <*-- Título de la sección -->
           <h2 id="titulo-producto">Dos lecturas. Una señal clara.</h2>
+
+          <*-- Explica cómo trabajan juntos los sensores, Arduino y los LED -->
           <p>
             El prototipo reúne sensores, un Arduino Uno y dos luces indicadoras.
             El sensor LDR registra cambios de iluminación; el KY-020 detecta
             inclinaciones o movimientos de la cava. El controlador procesa esas
             lecturas y comunica el estado con un LED verde o rojo.
           </p>
+
+          <*-- Lista que presenta cada componente electrónico del prototipo -->
           <ul class="feature-list">
+
+            <*-- Componente LDR: detecta cambios en la iluminación -->
             <li><img src="./public/images/componentes/ldr.jpg" alt="Sensor LDR del prototipo" /><strong>LDR</strong><span>Monitorea la luz que llega al espacio de guarda.</span></li>
+
+            <*-- Componente KY-020: detecta inclinaciones o movimientos -->
             <li><img src="./public/images/componentes/ky020.jpg" alt="Sensor KY-020 del prototipo" /><strong>KY-020</strong><span>Advierte cambios de posición o inclinación.</span></li>
+
+            <*-- Arduino Uno: recibe y procesa las señales de los sensores -->
             <li><img src="./public/images/componentes/arduino.jpg" alt="Placa Arduino Uno" /><strong>Arduino Uno</strong><span>Procesa las señales de ambos sensores.</span></li>
+
+            <*-- LED verde: indica el estado habitual -->
             <li><img src="./public/images/componentes/led-verde.jpg" alt="LED verde indicador" /><strong>LED verde</strong><span>Indica el estado habitual del dispositivo.</span></li>
+
+            <*-- LED rojo: indica que se detectó un cambio -->
             <li><img src="./public/images/componentes/led-rojo.jpg" alt="LED rojo indicador" /><strong>LED rojo</strong><span>Señala un cambio detectado por los sensores.</span></li>
           </ul>
+
+          <*-- Aclaración sobre las funciones y limitaciones del prototipo -->
           <p class="note">
             ScannerGuard detecta e indica cambios; no bloquea la luz ni evita
             físicamente el movimiento de las botellas.
@@ -105,6 +173,7 @@
         </div>
       </section>
 
+      <*-- GALERÍA: muestra fotografías del prototipo en diferentes entornos -->
       <section class="gallery" aria-labelledby="titulo-galeria">
         <div class="container gallery-inner">
           <div class="gallery-heading">
@@ -114,11 +183,17 @@
             </div>
             <p>El prototipo, visto de cerca y en escenarios naturales.</p>
           </div>
+
+          <*-- Contenedor que organiza las imágenes de la galería -->
           <div class="gallery-grid">
+
+            <*-- Primera fotografía del prototipo -->
             <figure class="gallery-item">
               <img src="./public/images/piedra.jpg" alt="ScannerGuard apoyado sobre una roca al atardecer" />
               <figcaption>Diseño compacto · luz de tarde</figcaption>
             </figure>
+
+            <*-- Segunda fotografía del prototipo -->
             <figure class="gallery-item">
               <img src="./public/images/escritorio.jpg" alt="Prototipo ScannerGuard sobre una mesa de madera" />
               <figcaption>Un vistazo a los indicadores del dispositivo</figcaption>
@@ -127,41 +202,67 @@
         </div>
       </section>
 
-      <section class="price" id="comprar" aria-labelledby="titulo-comprar">
+      <*-- SECCIÓN DE COMPRA: presenta el producto y permite consultar su precio -->
+      <section class="price" id="comprar">
         <div class="container shop-section">
           <div class="shop-intro">
             <p class="eyebrow">Conocé el prototipo</p>
             <h2 id="titulo-comprar">ScannerGuard Argentina</h2>
             <p>Un dispositivo para monitorear la luz y el movimiento en tu cava y cuidar las condiciones de guarda.</p>
           </div>
+
+          <*-- Tarjeta que contiene la información y el botón de compra -->
           <article class="shop-card" aria-label="Comprar ScannerGuard Argentina">
+
+            <*-- Imagen del producto -->
             <img
               class="shop-photo"
               src="./public/images/nieve.jpg"
               alt="Prototipo ScannerGuard en un entorno nevado patagónico"
             />
+
             <div class="shop-details">
+
+              <*-- Indica que el producto todavía está en desarrollo -->
               <p class="price-label">Prototipo en desarrollo</p>
+
               <h3>ScannerGuard Argentina</h3>
+
+              <*-- Descripción de las funciones del producto -->
               <p class="shop-description">Detecta cambios de iluminación e inclinación y los indica con luces LED. Ideal para estar atento al entorno de guarda de tus vinos.</p>
+
+              <*-- Muestra que el precio debe consultarse -->
               <p class="shop-price"><span>Precio</span><strong>A consultar</strong></p>
+
+              <*-- Formulario visual para ingresar la cantidad y realizar la consulta -->
               <div class="shop-form">
+
+                <*-- Etiqueta que identifica el campo de cantidad -->
                 <label for="cantidad">Cantidad</label>
+
+                <*-- Campo numérico donde el usuario indica cuántas unidades quiere -->
                 <input id="cantidad" name="Cantidad" type="number" min="1" value="1" required />
+
+                <*-- Botón que ejecuta la función JavaScript de compra -->
                 <button class="button button-light" id="comprar-instagram" type="button">Comprar</button>
               </div>
+
+              <*-- Texto que informa al usuario qué sucede al presionar Comprar -->
               <p class="shop-note" id="estado-compra" aria-live="polite">Al tocar Comprar, se abrirá WhatsApp con un mensaje listo según la cantidad elegida.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="container contact" id="contacto" aria-labelledby="titulo-contacto">
+      <*-- SECCIÓN DE CONTACTO: permite comunicarse con los responsables del proyecto -->
+      <section class="container contact" id="contacto">
         <div>
           <p class="eyebrow">Contacto</p>
           <h2 id="titulo-contacto">Hablemos de tu cava.</h2>
           <p>Escribinos para conocer el prototipo ScannerGuard Argentina.</p>
         </div>
+
+        <*-- Enlace que abre el perfil de contacto de Instagram -->
         <address>
           <a class="button" href="https://ig.me/m/scaner_guard_arg" target="_blank" rel="noopener noreferrer">
             Escribinos por Instagram · @scaner_guard_arg
@@ -170,29 +271,62 @@
       </section>
     </main>
 
+    <*-- FOOTER: pie de página con información de los integrantes del proyecto -->
     <footer class="site-footer">
       <div class="container footer-content">
+
+        <*-- Logo y nombre de ScannerGuard en el pie de página -->
         <a class="brand footer-brand" href="#inicio">
           <img src="./public/favicon.svg" alt="" width="34" height="34" />
           <span>ScannerGuard <small>Argentina</small></span>
         </a>
+
+        <*-- Créditos, integrantes, curso e institución -->
         <p>© 2026 ScannerGuard Argentina · Integrantes: <strong>Federico Caravotta, Simon Ambrosi y Lucio Woloszyn</strong> · Curso: <strong>3.er año · Instituto Austral de Enseñanza</strong></p>
       </div>
     </footer>
+
+    <*-- JAVASCRIPT: controla la interacción del botón de compra -->
+
     <script>
+      // Busca el campo numérico donde el usuario ingresa la cantidad
       const cantidad = document.querySelector('#cantidad');
+
+      // Busca el botón que permite iniciar la consulta de compra
       const botonComprar = document.querySelector('#comprar-instagram');
+
+      // Busca el párrafo donde se mostrará el estado de la consulta
       const estadoCompra = document.querySelector('#estado-compra');
 
+      // Detecta cuando el usuario hace clic en el botón Comprar
       botonComprar.addEventListener('click', () => {
-        if (!cantidad.reportValidity()) return;
 
+        // Comprueba que la cantidad ingresada sea válida
+        // Si no es válida, detiene la ejecución de la función
+        if (*cantidad.reportValidity()) return;
+
+        // Obtiene el valor del campo y lo convierte en un número
         const unidades = Number(cantidad.value);
+
+        // Comprueba si se eligió una sola unidad o varias
+        // Si es 1 utiliza "unidad"; de lo contrario, utiliza "unidades"
         const producto = unidades === 1 ? 'unidad' : 'unidades';
+
+        // Construye automáticamente un mensaje personalizado
+        // Inserta la cantidad y la palabra correspondiente dentro del texto
         const mensaje = `Hola, ScannerGuard Argentina. Quiero consultar por ${unidades} ${producto} de ScannerGuard. ¿Me pasan el precio y la disponibilidad?`;
 
+        // Convierte el mensaje a un formato compatible con una dirección URL
+        // Esto permite incluir espacios y caracteres especiales correctamente
         const texto = encodeURIComponent(mensaje);
+
+        // Abre una nueva pestaña con WhatsApp y el mensaje preparado
+        // wa.me permite iniciar una conversación con un número de teléfono
+        // _blank indica que se abre en otra pestaña
+        // noopener y noreferrer agregan protección al abrirla
         window.open(`https://wa.me/5492975413308?text=${texto}`, '_blank', 'noopener,noreferrer');
+
+        // Cambia el texto de la página para informar que WhatsApp se abrió
         estadoCompra.textContent = 'Se abrió WhatsApp con el mensaje listo. Revisalo y envialo para consultar tu pedido.';
       });
     </script>
